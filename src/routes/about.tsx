@@ -9,9 +9,9 @@ export default function About() {
         author={{ name: 'EmoPorEmilio', href: 'https://emoporemilio.uy/about' }}
         date='31/07/2024'
         tags={[]}>
-        <div class='flex items-center justify-center pb-4'>
+        <div class='flex items-center justify-center p-4'>
           <img
-            class='p-10 border-accent-300 border-2 w-[100px] md:w-[250px] shadow-lg group-hover:animate-wiggle'
+            class='md:p-10 p-4 border-accent-300 border-2 w-[200px] md:w-[250px] shadow-lg group-hover:animate-wiggle'
             src='/logo-pixelart.png'
           />
         </div>

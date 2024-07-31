@@ -18,7 +18,7 @@ export default function Layout({ children }: any) {
   return (
     <>
       <Header links={links} />
-      <main class='p-6 flex flex-col items-center justify-center border-t-2 border-accent-500 rounded-t-xl bg-bg-100'>
+      <main class='md:p-6 flex flex-col items-center justify-center border-t-2 border-accent-500 rounded-t-xl bg-bg-100'>
         {children}
       </main>
     </>
