@@ -8,7 +8,7 @@ export default function Layout({ children }: any) {
     'text-primary-500 pointer-events-none font-light tracking-[0.065em]';
   const hoverLinkClass = 'text-primary-100 hover:text-accent-200';
 
-  const { pathname } = useLocation();
+  const location = useLocation();
 
   const checkClass = (path: string, pathname: string) => {
     return pathname === path || pathname === path + '/'
@@ -37,12 +37,12 @@ export default function Layout({ children }: any) {
   };
 
   const [links, setLinks]: Signal<HeaderLink[]> = createSignal<HeaderLink[]>(
-    generateLinks(pathname)
+    generateLinks(location?.pathname)
   );
 
   createEffect(() => {
-    setLinks(generateLinks(pathname));
-  }, [pathname]);
+    setLinks(generateLinks(location?.pathname));
+  }, [location?.pathname]);
   return (
     <>
       <Header links={links()} />
