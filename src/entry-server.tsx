@@ -6,7 +6,7 @@ export default createHandler(() => (
     document={({ assets, children, scripts }) => (
       <html lang='es'>
         <head>
-          {' '}
+          <title>EmoPorEmilio</title>
           <meta charset='UTF-8' />
           <meta
             name='description'
@@ -36,7 +36,8 @@ export default createHandler(() => (
         </head>
 
         <body class='font-jost subpixel-antialiased bg-bg-100'>
-          {children}
+          <div id='app'>{children}</div>
+
           {scripts}
         </body>
       </html>
