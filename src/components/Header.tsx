@@ -109,7 +109,7 @@ export default function Header({ links }: any) {
           </div>
         </div>
         <div class='hidden md:flex gap-8'>
-          <For each={links}>
+          <For each={links} fallback={<></>}>
             {(link) => (
               <a class={link.class} href={link.href}>
                 {link.text}
