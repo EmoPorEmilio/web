@@ -41,7 +41,7 @@ export default function About() {
         <p>
           El desarrollo <i>front-end</i> es mi casa y el diseño <i>UI/UX</i> mi
           hobby principal, pero estuve los últimos años profundizando mis
-          habilidades
+          habilidades&nbsp;
           <i>full-stack</i>, entendiendo mejor del <i>back-end</i> para sistemas
           distribuidos, infraestructura y <i>Dev-Ops</i>. He trabajado con
           distintas metodologías ágiles y <i>frameworks</i> de desarrollo.
