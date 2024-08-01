@@ -63,7 +63,7 @@ export default function Header({ links }: any) {
           </div>
         </div>
       </nav>
-      <nav class='group bg-bg-400 h-[55px] text-lg font-semibold justify-around items-center flex py-6 px-4'>
+      <header class='group bg-bg-400 h-[55px] text-lg font-semibold justify-around items-center flex py-6 px-4'>
         <div class='flex justify-between items-center md:justify-start gap-2 flex-1'>
           <A href='/'>
             <img
@@ -102,7 +102,7 @@ export default function Header({ links }: any) {
             />
           </div>
         </div>
-        <div class='hidden md:flex gap-8'>
+        <nav class='hidden md:flex gap-8'>
           <For each={links} fallback={<></>}>
             {(link) => (
               <A
@@ -113,8 +113,8 @@ export default function Header({ links }: any) {
               </A>
             )}
           </For>
-        </div>
-      </nav>
+        </nav>
+      </header>
     </>
   );
 }
