@@ -12,7 +12,7 @@ interface Props {
 export default function Card({ title, author, date, tags, children }: Props) {
   return (
     <>
-      <div class='group flex w-full max-w-[1000px] flex-col px-2 overflow-hidden'>
+      <div class='group flex w-full max-w-[1000px] flex-col px-2'>
         <span class='relative left-8 top-5 bg-gradient-to-b from-primary-100 to-primary-500 bg-clip-text text-2xl md:text-4xl font-bold text-transparent drop-shadow-title-card'>
           {title}
         </span>
@@ -28,7 +28,7 @@ export default function Card({ title, author, date, tags, children }: Props) {
             </div>
           </div>
         </div>
-        <div class='mt-1 flex flex-col rounded-b-3xl border-b border-b-accent-500 bg-bg-300 hover:shadow-card'>
+        <div class='mt-1 flex flex-col rounded-b-3xl border-b border-b-accent-500 bg-bg-300 group-hover:shadow-card'>
           <div class='flex flex-col md:px-8 flex-1 p-4 font-sen text-lg text-gray-100 gap-3'>
             {children}
           </div>

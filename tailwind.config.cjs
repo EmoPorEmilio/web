@@ -7,7 +7,9 @@ export default {
     './node_modules/proyecto-viviana-ui/dist/index/*',
   ],
   theme: {
-    ...mainTheme,
+    extend: {
+      ...mainTheme,
+    },
   },
   plugins: [],
 };
