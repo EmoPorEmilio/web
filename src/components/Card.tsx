@@ -13,9 +13,11 @@ export default function Card({ title, author, date, tags, children }: Props) {
   return (
     <>
       <div class='group flex w-full max-w-[1000px] flex-col px-2'>
-        <span class='relative left-8 top-5 bg-gradient-to-b from-primary-100 to-primary-500 bg-clip-text text-2xl md:text-4xl font-bold text-transparent drop-shadow-title-card'>
-          {title}
-        </span>
+        <div class='relative pl-8 top-5 '>
+          <span class=' bg-gradient-to-b from-primary-100 to-primary-500 bg-clip-text text-2xl md:text-4xl font-bold text-transparent drop-shadow-title-card'>
+            {title}
+          </span>
+        </div>
         <div class='flex h-[46px] flex-col justify-end rounded-t-[26px] bg-primary-800'>
           <div class='flex h-[40px] flex-col justify-end rounded-t-[30px] bg-primary-600'>
             <div class='flex h-[20px] items-center justify-end rounded-t-[100px] bg-primary-700 pr-4'>

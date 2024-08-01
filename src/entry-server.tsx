@@ -36,7 +36,9 @@ export default createHandler(() => (
         </head>
 
         <body class='font-jost subpixel-antialiased bg-bg-100'>
-          <div id='app'>{children}</div>
+          <div id='app' class='bg-bg-400'>
+            {children}
+          </div>
 
           {scripts}
         </body>
