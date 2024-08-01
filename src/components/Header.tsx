@@ -28,7 +28,7 @@ export default function Header({ links }: any) {
           <div class='flex h-14 w-full items-center justify-center border-b-4 border-solid border-accent-500 bg-bg-400'>
             <ImCross
               size={30}
-              onclick={() => handleCloseMenu()}
+              onclick={handleCloseMenu}
               class='absolute left-4 subpixel-antialiased text-accent-200 cursor-pointer origin-top-right'
             />
             <span class='text-4xl font-jost font-extrabold tracking-wider text-primary-300'>
@@ -63,11 +63,11 @@ export default function Header({ links }: any) {
           </div>
         </div>
       </nav>
-      <nav class='bg-bg-400 h-[55px] text-lg font-semibold justify-around items-center flex py-6 px-4'>
+      <nav class='group bg-bg-400 h-[55px] text-lg font-semibold justify-around items-center flex py-6 px-4'>
         <div class='flex justify-between items-center md:justify-start gap-2 flex-1'>
           <A href='/'>
             <img
-              class='hover:animate-wiggle'
+              class='group-hover:animate-wiggle'
               width='55'
               height='28'
               src='/logo.svg'
@@ -96,8 +96,8 @@ export default function Header({ links }: any) {
           </div>
           <div class='md:hidden'>
             <FiMenu
-              class='subpixel-antialiased text-primary-100 cursor-pointer'
-              onClick={() => handleOpenMenu()}
+              class='subpixel-antialiased text-primary-100 cursor-pointer hover:text-accent-500'
+              onclick={handleOpenMenu}
               size={40}
             />
           </div>
