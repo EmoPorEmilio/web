@@ -30,7 +30,6 @@ export default function Header({ links }: any) {
           onclick={handleCloseMenu}
           class='absolute left-4 subpixel-antialiased text-accent-200 cursor-pointer origin-top-right'
         />
-        {/*}
         <div class='flex h-[100dvh] w-[100dvw] flex-col'>
           <div class='flex h-14 w-full items-center justify-center border-b-4 border-solid border-accent-500 bg-bg-400'>
             <span class='text-4xl font-jost font-extrabold tracking-wider text-primary-300'>
@@ -63,7 +62,7 @@ export default function Header({ links }: any) {
               TUTORIALES
             </span>
           </div>
-        </div>*/}
+        </div>
       </nav>
       <header class='group bg-bg-400 h-[55px] text-lg font-semibold justify-around items-center flex py-6 px-4'>
         <div class='flex justify-between items-center md:justify-start gap-2 flex-1'>
@@ -87,7 +86,7 @@ export default function Header({ links }: any) {
               <FiGithub
                 class=' text-primary-200 hover:text-accent-200'
                 size={24}
-              />{' '}
+              />
             </A>
             <A target='_blank' href='https://www.youtube.com/emoporemilio'>
               <AiOutlineYoutube

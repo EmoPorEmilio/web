@@ -3,6 +3,10 @@ import Header from './Header';
 export default function Layout({ children }: any) {
   const links = [
     {
+      text: 'INICIO',
+      href: '/home',
+    },
+    {
       text: 'BLOG',
       href: '/blog',
     },
