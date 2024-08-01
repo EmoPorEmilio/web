@@ -23,45 +23,37 @@ export default function Header({ links }: any) {
     <>
       <nav
         id='collapsable-menu'
-        class='transition duration-300 ease-in-out scale-0 origin-top-right z-10 absolute w-full h-full bg-bg-200'>
+        class='transition duration-300 ease-in-out scale-0 origin-top-right z-10 absolute w-full h-full bg-bg-300'>
         {' '}
         <ImCross
-          size={30}
+          size={24}
           onclick={handleCloseMenu}
-          class='absolute left-4 subpixel-antialiased text-accent-200 cursor-pointer origin-top-right'
+          class='absolute top-4 left-4 subpixel-antialiased text-accent-200 hover:text-accent-500 cursor-pointer origin-top-right'
         />
         <div class='flex h-[100dvh] w-[100dvw] flex-col'>
           <div class='flex h-14 w-full items-center justify-center border-b-4 border-solid border-accent-500 bg-bg-400'>
             <span class='text-4xl font-jost font-extrabold tracking-wider text-primary-300'>
-              ANUNCIOS
+              SECCIONES
             </span>
           </div>
-          <div class='flex h-10 w-full items-center border-b-4 border-bg-100 bg-primary-600 pl-4'>
-            <A href='/' class={`font-sen text-xl text-gray-200`}>
-              Proyecto Viviana
-            </A>
-          </div>
-          <div class='flex h-10 w-full items-center border-b-4 border-bg-100 bg-primary-600 pl-4'>
-            <A href='/' class={'font-sen text-xl text-gray-200'}>
-              Proyecto Viviana
-            </A>
-          </div>
-          <div class='flex h-10 w-full items-center border-b-4 border-bg-100 bg-primary-600 pl-4'>
-            <A href='/calendar' class={'font-sen text-xl text-gray-200'}>
-              Calendar
-            </A>
-          </div>
-          <div class='flex h-10 w-full items-center border-b-4 border-bg-100 bg-primary-600 pl-4'>
-            <A href='/mobile' class={'font-sen text-xl text-gray-200'}>
-              {' '}
-              Mobile{' '}
-            </A>
-          </div>
-          <div class='flex h-14 w-full items-center justify-center border-b-2 border-solid border-accent-500 bg-bg-400'>
+          <For each={links} fallback={<></>}>
+            {(link) => (
+              <A
+                href={link.href}
+                inactiveClass='bg-primary-600 hover:bg-bg-100 hover:text-accent-200 text-primary-200 border-bg-100 hover:border-accent-300'
+                activeClass='text-primary-300 bg-bg-100 pointer-events-none border-accent-200'
+                class={`font-sen text-xl flex h-10 cursor-pointer w-full items-center border-b-2  pl-4`}>
+                {link.text}
+              </A>
+            )}
+          </For>
+          <div class='flex h-14 w-full items-center justify-center border-b-4 border-solid border-accent-500 bg-bg-400'>
             <span class='text-4xl font-bold tracking-wider text-primary-300'>
-              TUTORIALES
+              REDES
             </span>
           </div>
+
+          <div class='flex flex-1' onclick={handleCloseMenu} />
         </div>
       </nav>
       <header class='group bg-bg-400 h-[55px] text-lg font-semibold justify-around items-center flex py-6 px-4'>
@@ -107,6 +99,7 @@ export default function Header({ links }: any) {
           <For each={links} fallback={<></>}>
             {(link) => (
               <A
+                class='uppercase'
                 activeClass={currentLinkClass}
                 inactiveClass={hoverLinkClass}
                 href={link.href}>

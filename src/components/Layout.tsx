@@ -1,28 +1,39 @@
+import { Show } from 'solid-js';
 import Header from './Header';
 
-export default function Layout({ children }: any) {
+export default function Layout({
+  withHeader = true,
+  withBottomNav = false,
+  children,
+}: any) {
+  const stylesWithHeader = 'border-t-2 border-accent-500 rounded-t-xl';
   const links = [
     {
-      text: 'INICIO',
+      text: 'Inicio',
       href: '/home',
     },
     {
-      text: 'BLOG',
+      text: 'Blog',
       href: '/blog',
     },
     {
-      text: 'PROYECTOS',
+      text: 'Proyectos',
       href: '/projects',
     },
     {
-      text: 'SOBRE MÍ',
+      text: 'Sobre mí',
       href: '/about',
     },
   ];
   return (
     <>
-      <Header links={links} />
-      <main class='py-4 pb-6 md:p-6 flex flex-col items-center justify-center border-t-2 border-accent-500 rounded-t-xl bg-bg-100'>
+      <Show when={withHeader}>
+        <Header links={links} />
+      </Show>
+      <main
+        class={`${
+          withHeader && stylesWithHeader
+        } py-4 pb-6 md:p-6 flex flex-col items-center justify-center bg-bg-100`}>
         {children}
       </main>
     </>

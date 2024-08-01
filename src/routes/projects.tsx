@@ -9,9 +9,9 @@ export default function About() {
         author={{ name: 'EmoPorEmilio', href: 'https://emoporemilio.uy/about' }}
         date='31/07/2024'
         tags={[]}>
-        <div class='flex items-center justify-center pb-4'>
+        <div class='flex items-center justify-center p-4'>
           <img
-            class='p-10 border-accent-300 border-2 w-[100px] md:w-[250px] shadow-lg group-hover:animate-wiggle'
+            class='md:p-10 p-4 border-accent-300 border-2 w-[200px] md:w-[250px] shadow-lg group-hover:animate-wiggle'
             src='/logo-pixelart.png'
           />
         </div>
@@ -28,9 +28,8 @@ export default function About() {
         </p>
         <p class=''>
           Soy extremadamente inquieto y curioso, no pienso linealmente, ni me
-          llevo bien con excesos de burocracia, imposiciones absurdas y{' '}
-          <i>deadlines</i>
-          estrictos.
+          llevo bien con excesos de burocracia, imposiciones absurdas y&nbsp;
+          <i>deadlines</i>&nbsp;estrictos.
         </p>
         <p class=''>
           A nivel código me manejo principalmente con Javascript y Typescript, y
@@ -42,7 +41,7 @@ export default function About() {
         <p>
           El desarrollo <i>front-end</i> es mi casa y el diseño <i>UI/UX</i> mi
           hobby principal, pero estuve los últimos años profundizando mis
-          habilidades
+          habilidades&nbsp;
           <i>full-stack</i>, entendiendo mejor del <i>back-end</i> para sistemas
           distribuidos, infraestructura y <i>Dev-Ops</i>. He trabajado con
           distintas metodologías ágiles y <i>frameworks</i> de desarrollo.
