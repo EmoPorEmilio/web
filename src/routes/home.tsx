@@ -76,7 +76,7 @@ export default function About() {
             class='font-semibold text-accent-200 hover:text-accent-500 hover:underline'>
             Proyecto Viviana
           </a>
-          , el proyecto más ambicioso y pretensioso que tuve en mi vida.
+          , el proyecto más ambicioso y pretencioso que tuve en mi vida.
         </p>
       </Card>
     </Layout>
